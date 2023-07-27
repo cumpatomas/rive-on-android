@@ -49,8 +49,8 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        binding.username.setOnFocusChangeListener { view, b ->
-            if (b) {
+        binding.username.setOnFocusChangeListener { view, boolean ->
+            if (boolean) {
                 binding.robot.setBooleanState("LoginRobot", "error", false)
                 binding.robot.controller.setBooleanState("LoginRobot", "username", true)
             } else {
@@ -58,8 +58,8 @@ class MainActivity : AppCompatActivity() {
             }
         }
 
-        binding.tiPassword.setOnFocusChangeListener { view, b ->
-            if (b) {
+        binding.tiPassword.setOnFocusChangeListener { view, boolean ->
+            if (boolean) {
                 binding.robot.setBooleanState("LoginRobot", "error", false)
                 binding.robot.controller.setBooleanState("LoginRobot", "password", true)
             } else {
