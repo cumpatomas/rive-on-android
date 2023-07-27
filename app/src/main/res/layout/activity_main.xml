@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#C6C0EA"
+    tools:context=".MainActivity">
+
+    <app.rive.runtime.kotlin.RiveAnimationView
+        android:id="@+id/robot"
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/username"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.78"
+        app:riveLoop="LOOP"
+        app:riveResource="@raw/login_rive_robot"
+        app:riveStateMachine="LoginRobot"
+        app:riveTraceAnimations="false" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/username"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:textSize="16sp"
+        android:textColor="#777777"
+        android:hint="username"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@id/tiPassword"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/robot" />
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/tiPassword"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="password"
+        android:textColor="#777777"
+        android:textSize="16sp"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/username" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/loginButtonTrigger"
+        android:layout_width="170dp"
+        android:layout_height="80dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="@+id/loginButton"
+        app:layout_constraintStart_toStartOf="@+id/loginButton"
+        app:layout_constraintTop_toTopOf="@+id/loginButton">
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <app.rive.runtime.kotlin.RiveAnimationView
+        android:id="@+id/loginButton"
+        android:layout_width="170dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="24dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tiPassword"
+        app:riveLoop="LOOP"
+        app:riveResource="@raw/login_rive_button"
+        app:riveStateMachine="State Machine 1"
+        app:riveTraceAnimations="false" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
