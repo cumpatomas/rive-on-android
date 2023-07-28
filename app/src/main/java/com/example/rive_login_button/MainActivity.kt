@@ -40,9 +40,12 @@ class MainActivity : AppCompatActivity() {
             hideKeyboard(this)
             binding.tiPassword.clearFocus()
             binding.username.clearFocus()
+
             if (username.isEmpty() || password.isEmpty()) {
                 binding.robot.setBooleanState("LoginRobot", "error", true)
             } else {
+                binding.tiPassword.isEnabled = false
+                binding.username.isEnabled = false
                 binding.robot.setBooleanState("LoginRobot", "error", false)
                 binding.loginButton.fireState("State Machine 1", "clicked")
                 binding.robot.setBooleanState("LoginRobot", "loging", true)
