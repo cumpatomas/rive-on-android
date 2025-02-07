@@ -24,7 +24,7 @@ I also use view binding for the project, remember to add this on your gradle fil
 
 In the activity_main layout XML file you'll see that I implement a Constraint Layout
 to act as a trigger of the rive view. This is because I don't know the way to make
-the rive view clickable and set the click listener on it directly. lease let me know if
+the rive view clickable and set the click listener on it directly. Please let me know if
 you find the correct way to do it :)
 
 That's why I created a Constraint Layout (it will also work with an Image view also) constraint to 
